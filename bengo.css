@@ -1,0 +1,281 @@
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+place-items: center;
+font-size: 18px;
+line-height: 1;
+font-family: "DM Sans", sans-serif;
+font-style: normal;
+
+}
+
+img{
+    max-width: 100%;
+    display: block;
+}
+ .social{
+    font-size: 3.5rem;  
+    font-weight: 500;
+ }
+ .create{
+    font-size: 2.3rem;
+    font-weight: 500;
+ }
+ .manage{
+    font-size: 2.0rem;
+    font-weight: 500;
+ }
+ .li-text{
+    font-size: 1.1rem;
+    font-weight: 350;
+ }
+ .grid-container{
+    display: grid;
+    gap: 1.5rem;
+    padding: 40px;
+    margin: auto;
+     width: 80%;
+    grid-template-columns: 20% auto 20%;
+    grid-auto-rows: 80px;
+    grid-template-areas: 
+       'grid1 grid2 grid2 grid3'
+       'grid1 grid2 grid2 grid3'
+       'grid1 grid2 grid2 grid3'
+       'grid1 grid2 grid2 grid3'
+       'grid1 grid5 grid7 grid3'
+       'grid4 grid5 grid7 grid3'
+       'grid4 grid5 grid7 grid3'
+       'grid4 grid6 grid8 grid8'
+       'grid4 grid6 grid8 grid8'
+       'grid4 grid6 grid8 grid8'
+    ;
+ }
+ .grid-container .box{
+    border-radius: 10px;
+    
+ }
+
+ .grid1{
+    background-color: rgb(243, 236, 174);
+    grid-area: grid1;
+    padding: 5rem 2rem 0 2.4rem;
+    
+ }
+ .grid1 img{
+    margin-top: 1.5rem;
+ }
+ .grid2{
+    background-color: blue;
+    color: white;
+    grid-area: grid2;
+    text-align: center;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
+ }
+ .grid2 .times{
+    color: orange;
+    font-weight: 500;
+ }
+ .grid2 img{
+    width: 10rem;
+ }
+ .grid3{
+    background-color: rgb(175, 175, 211);
+    grid-area: grid3;
+    padding: 3rem 2rem 2rem 2rem ;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative; 
+    overflow: hidden;
+ }
+ .grid3 img{
+    position: absolute;
+    left: 50px;
+    height: 420px;
+    top: 120px;
+    object-position: left;
+    object-fit: cover;
+    border-top-right-radius: 0;
+    padding: 1rem;
+ }
+ .grid3 .li-text{
+    padding: 1rem;
+    font-weight: 500;  
+ }
+ .grid4{
+    background-color: orange;
+    grid-area: grid4;
+    padding: 2.5rem 2rem;  
+ }
+ .grid4 img{
+    margin-top: 4rem;
+    margin-bottom: 0;
+    padding-left: .5rem;
+ }
+ .grid5{
+    background-color: white;
+    grid-area: grid5;
+    padding: 1rem 2rem;
+    object-position: left;
+    object-fit: cover;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+ }
+ .grid5 img{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    left: 100px;
+    position: absolute;
+ }
+ .grid5 .manage{
+    margin-top: 8rem;
+    padding: 2rem ;
+ }
+ .grid6{
+    background-color: white;
+    grid-area: grid6;
+    padding: 2rem;
+     
+ }
+ .grid6 span{
+    margin-bottom: 1.5rem;
+    display: flex;
+    
+ }
+ .grid6 img{
+    width: 15rem;
+    padding: 2rem 1rem;
+ }
+ .grid7{
+    background-color: orange;
+    grid-area: grid7;
+    padding: 1.5rem 1.5rem;
+    object-position: top;
+    object-fit: cover;
+    position: relative; 
+    overflow: hidden;  
+ }
+ .grid7 img{
+    position: absolute;
+    top: 153px;
+    left: 0px;
+    padding: 1.5rem;
+ }
+ .grid8{
+    background-color: blue;
+    grid-area: grid8;
+    padding: 2rem;
+    color: white;
+    display: flex
+ }
+ .grid8 img{
+    width: 300px;
+ }
+ .grid8 .create{
+    margin-top: 2rem;
+    margin-left: 2rem;
+    padding: 1rem;
+ }
+ @media (max-width: 1108px) {
+   .grid-container{
+      grid-auto-rows: initial;
+      grid-template-areas: 
+        'grid1 grid1 grid2 grid2'
+        'grid1 grid1 grid2 grid2'
+        'grid3 grid3 grid4 grid4'
+        'grid3 grid3 grid4 grid4'
+        'grid5 grid5 grid6 grid6'
+        'grid5 grid5 grid6 grid6'
+        'grid7 grid7 grid8 grid8'
+        'grid7 grid7 grid8 grid8'
+      ;
+   }
+   .grid1{
+      padding: 1.5rem;
+   }
+   .grid3{
+      padding: 1rem
+   }
+   .grid3 img{
+      left: 50px;
+      height: 300px;
+      top: 85px;
+      object-position: left;
+      object-fit: cover;
+      border-top-right-radius: 0;
+      padding: 1rem;
+   }
+   .grid3 .li-text{
+      padding: 1rem;
+      font-weight: 500;  
+   }
+   .grid6{
+      padding: 2rem;
+      margin-top: 1rem;
+   }
+   .grid6 img{
+      margin-top: 2rem;
+   }
+ }
+ @media (max-width: 400px) {
+   .grid-container{
+      grid-auto-rows: initial;
+      grid-template-areas: 
+         'grid2 grid2'
+         'grid5 grid5'
+         'grid7 grid7'
+         'grid3 grid3'
+         'grid8 grid8'
+         'grid6 grid6'
+         'grid1 grid1'
+         'grid4 grid4'
+      ;
+   }
+   .create{
+      font-size: 20px;
+      padding: 1rem;
+   }
+   .grid3{
+      padding: .5rem;
+   }
+   .grid3 img{
+      left: 1px;
+      height: 140px;
+      top: 60px;
+      width: 250px;
+      object-fit: cover;
+
+   }
+   .grid3 .li-text{
+      font-size: 15px;
+      font-weight: 500;
+      margin-top: 100px;  
+   }
+   .manage{
+      font-size: 19px;
+      padding: 1rem;
+      margin-bottom: 90px;
+   }
+   .grid7{
+      padding: .01rem;
+      font-size: 30px;
+      width: 250px;
+   }
+   .grid7 img{
+      top: 20px;
+      margin-top: 20px;
+   }
+   }
+   
+ 
